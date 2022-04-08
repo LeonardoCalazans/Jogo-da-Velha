@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="painel-esquerdo">
+            <input type="text" placeholder="Digite o jogador 1 (O)" class="input-jogador"/>
+            <input type="text" placeholder="Digite o jogador 2 (x)" class="input-jogador"/>
+        </div>
+        <div id="painel-direito">
+            
+            <div id="tabuleiro">
+                <div class="tabuleiro-linha" id="linha-um">
+                    <div class="tabuleiro-jogada">O</div>
+                    <div class="tabuleiro-jogada">O</div>
+                    <div class="tabuleiro-jogada">X</div>
+                </div>
+                <div class="tabuleiro-linha" id="linha-dois">
+                    <div class="tabuleiro-jogada">X</div>
+                    <div class="tabuleiro-jogada">X</div>
+                    <div class="tabuleiro-jogada">O</div>
+                </div>
+                <div class="tabuleiro-linha" id="linha-tres">
+                    <div class="tabuleiro-jogada">O</div>
+                    <div class="tabuleiro-jogada">X</div>
+                    <div class="tabuleiro-jogada">O</div>
+                </div>
+            </div>
+
+            <div id="container-acao">
+                <div id="botao-iniciar" onclick="comecar()">Começar o Jogo!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
