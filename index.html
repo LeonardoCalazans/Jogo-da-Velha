@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="login ">
+    <section class="login">
         <div class="flex-row">
             <label for="onePlayer">Jogador O :</label>
             <input type="text" id="onePlayer" name="onePlayer" placeholder="Digite o jogador 1 (O)"
@@ -21,17 +21,17 @@
             <input type="text" id="twoPlayer" name="twoPlayer" placeholder="Digite o jogador 2 (x)"
                 class="input-player" />
         </div>
-        <button data-submit="button-play">Começar o Jogo!</button>
+        <button class="button-play">Começar o Jogo!</button>
     </section>
     <section id="gameplay" class="hidden">
         <div id="playOne" class='scoreboard'>
             <h1>jogador um</h1>
             <h2>Placar: ...</h2>
         </div>
-        <div id="board">
+        <div id="board" class="circle">
             <div class="line-board" id="line-one">
-                <div class="line-played"></div>
-                <div class="line-played"></div>
+                <div class="line-played x"></div>
+                <div class="line-played circle"></div>
                 <div class="line-played"></div>
             </div>
             <div class="line-board" id="line-two">
@@ -50,12 +50,17 @@
             <h2>Placar: ...</h2>
         </div>
     </section>
-    <!-- <section>
+    <section class="hidden">
         <div class="winning-message">
-            <p> Jogador vencenceu</p>
-            <button>Revanche</button>
+            <p class="winning-message-text"> Jogador venceu</p>
+            <div class="flex-row">
+                <button id="buttonRevanche" class="button">Revanche!</button>
+                <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
+                <button id="buttonRecords" class="button">Recordes</button>
+
+            </div>
         </div>
-    </section> -->
+    </section>
     <script src="main.js" type="module"></script>
 </body>
 
