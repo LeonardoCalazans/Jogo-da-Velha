@@ -1,41 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="estilo.css"/>
 </head>
+
 <body>
-    
-    <div id="container">
-        <div id="painel-esquerdo">
-            <input type="text" placeholder="Digite o jogador 1 (O)" class="input-jogador"/>
-            <input type="text" placeholder="Digite o jogador 2 (x)" class="input-jogador"/>
+    <section class="login">
+        <div class="flex-row">
+            <label for="onePlayer">Jogador O :</label>
+            <input type="text" id="onePlayer" name="onePlayer" placeholder="Digite o jogador 1 (O)"
+                class="input-player" />
         </div>
-        <div id="painel-direito">
-            
-            <div id="tabuleiro">
-                <div class="tabuleiro-linha" id="linha-um">
-                    <div class="tabuleiro-jogada">O</div>
-                    <div class="tabuleiro-jogada">O</div>
-                    <div class="tabuleiro-jogada">X</div>
-                </div>
-                <div class="tabuleiro-linha" id="linha-dois">
-                    <div class="tabuleiro-jogada">X</div>
-                    <div class="tabuleiro-jogada">X</div>
-                    <div class="tabuleiro-jogada">O</div>
-                </div>
-                <div class="tabuleiro-linha" id="linha-tres">
-                    <div class="tabuleiro-jogada">O</div>
-                    <div class="tabuleiro-jogada">X</div>
-                    <div class="tabuleiro-jogada">O</div>
-                </div>
+        <div class="flex-row">
+            <label for="twoPlayer">Jogador X :</label>
+            <input type="text" id="twoPlayer" name="twoPlayer" placeholder="Digite o jogador 2 (x)"
+                class="input-player" />
+        </div>
+        <button class="button-play">Começar o Jogo!</button>
+    </section>
+    <section id="gameplay" class="hidden">
+        <div id="playOne" class='scoreboard'>
+            <h1>jogador um</h1>
+            <h2>Placar: ...</h2>
+        </div>
+        <div id="board" class="circle">
+            <div class="line-board" id="line-one">
+                <div class="line-played x"></div>
+                <div class="line-played circle"></div>
+                <div class="line-played"></div>
             </div>
-
-            <div id="container-acao">
-                <div id="botao-iniciar" onclick="comecar()">Começar o Jogo!</div>
+            <div class="line-board" id="line-two">
+                <div class="line-played"></div>
+                <div class="line-played"></div>
+                <div class="line-played"></div>
+            </div>
+            <div class="line-board" id="line-three">
+                <div class="line-played"></div>
+                <div class="line-played"></div>
+                <div class="line-played"></div>
             </div>
         </div>
-    </div>
+        <div id="playTwo" class='scoreboard'>
+            <h1>jogador dois</h1>
+            <h2>Placar: ...</h2>
+        </div>
+    </section>
+    <section class="hidden">
+        <div class="winning-message">
+            <p class="winning-message-text"> Jogador venceu</p>
+            <div class="flex-row">
+                <button id="buttonRevanche" class="button">Revanche!</button>
+                <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
+                <button id="buttonRecords" class="button">Recordes</button>
 
-    <script src="main.js"></script>
+            </div>
+        </div>
+    </section>
+    <script src="main.js" type="module"></script>
 </body>
+
 </html>

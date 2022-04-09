@@ -1,3 +1,4 @@
+import buttonPlayNow from "./modules/buttonPlay.js";
 /*
 PONTOS DA AV1:    
     JOGO SÓ PODE COMEÇAR QUANDO O NOME DE AMBOS JOGADORES FOREM INFORMADOS
@@ -11,9 +12,12 @@ PONTOS DA AV1:
     AO FINAL DO MELHOR DE TRES O VENCEDOR DEVERÁ TER O NOME APRESENTADO NO LUGAR DO JOGO DA VELHA
     DEVERÁ SER ATUALIZADO O HISTÓRICO DAS PARTIDAS 
 */
+const onePlayer = document.getElementById('onePlayer');
+const twoPlayer = document.getElementById('twoPlayer');
 
-function comecar(){
-  
+buttonPlayNow();
+function comecar() {
+
     // EXEMPLO DE MANIPULACAO E RECUPERACAO DE DADOS DA DOM
     // let conteudo = document.getElementById("botao-iniciar");
     // console.log(conteudo.innerHTML)

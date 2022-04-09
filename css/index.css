@@ -1,0 +1,9 @@
+@import url('./themes/general-style.css');
+@import url('./themes/button.css');
+@import url('./login/login.css');
+@import url('./gameplay/gameplay.css');
+@import url('./gameplay/board.css');
+@import url('./gameplay/boardgaming.css');
+@import url('./gameplay/scoreboard.css');
+@import url('./endGame/winner.css');
+@import url('./endGame/records.css');

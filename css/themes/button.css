@@ -1,0 +1,41 @@
+@import url('./frames.css');
+@import url('../themes/colors.css');
+
+.button-play{
+    background-color: var(--second-pink);
+    width: 89%;
+    height: 60px;
+    border:2px solid var(--primary-pink);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--font);
+    font-size: 1.5rem;
+    transition: .5s;
+    letter-spacing: .2rem;
+}
+
+.button{
+    background-color: var(--second-pink);
+    width: 120%;
+    height: 5rem;
+    border:2px solid var(--primary-pink);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--font);
+    font-size: 1.5rem;
+    transition: .5s;
+    letter-spacing: .2rem;
+    margin-right: 1rem;
+}
+.button:hover, .button-play:hover{
+    transition: .5s;
+    animation: bounce 1s;
+    background-color: var(--primary-pink);
+    opacity: 0.8;
+}
