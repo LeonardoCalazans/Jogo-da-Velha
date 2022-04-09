@@ -1,0 +1,33 @@
+@import url('../themes/colors.css');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(90deg, var(--second-pink), var(--primary-pink));
+    color:var(--font);
+    font-size: 24px;
+    font-family: arial;
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden{
+    display: hidden;
+    overflow: hidden;
+    visibility: hidden;
+}

@@ -1,0 +1,29 @@
+@import url('../themes/colors.css');
+.login{
+    height: 20rem;
+    background-color: var(--second-pink);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.input-player{
+    height: 40px;
+    margin-left: .25rem;
+    font-size: 1.5rem;
+    color: #333;
+    border: none;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.input-player::placeholder{
+    color:var(--font);
+}
+.input-player::selection{
+    color: var(--primary-pink);
+    border-color: var(--primary-pink);
+}
