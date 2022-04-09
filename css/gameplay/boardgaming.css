@@ -1,0 +1,45 @@
+@import url('../themes/colors.css');
+.line-played.x,
+.line-played.circle {
+  cursor: not-allowed;
+}
+
+.line-played.x::before,
+.line-played.x::after,
+#board.x .line-played:not(.x):not(.circle):hover::after,
+#board.x .line-played:not(.x):not(.circle):hover::before {
+  content: "";
+  height: calc(10rem * 0.15);
+  width: calc(10rem * 0.9);
+  background: var(--color);
+  position: absolute;
+}
+
+.line-played.x::before,
+#board.x .line-played:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
+}
+
+.line-played.x::after,
+#board.x .line-played:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+.line-played.circle::before,
+.line-played.circle::after,
+#board.circle .line-played:not(.x):not(.circle):hover::after,
+#board.circle .line-played:not(.x):not(.circle):hover::after {
+  content: "";
+  height: calc(8rem * 0.9);
+  width: calc(8rem * 0.9);
+  background: var(--color);
+  position: absolute;
+  border-radius: 50%;
+}
+
+#board.x .line-played:not(.x):not(.circle):hover::after,
+#board.x .line-played:not(.x):not(.circle):hover::before,
+#board.circle .line-played:not(.x):not(.circle):hover::after,
+#board.x .line-played:not(.x):not(.circle):hover::before {
+  background: var(--color-hover);
+}
