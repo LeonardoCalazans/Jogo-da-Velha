@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 body{
     background: linear-gradient(90deg, var(--second-pink), var(--primary-pink));
@@ -25,9 +26,16 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .hidden{
     display: hidden;
     overflow: hidden;
     visibility: hidden;
+    display: none;
 }
