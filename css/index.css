@@ -5,3 +5,5 @@
 @import url('./gameplay/board.css');
 @import url('./gameplay/boardgaming.css');
 @import url('./gameplay/scoreboard.css');
+@import url('./endGame/winner.css');
+@import url('./endGame/records.css');

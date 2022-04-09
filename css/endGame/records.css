@@ -1,0 +1,29 @@
+@import url("../themes/colors.css");
+
+.table {
+  width: 80%;
+  margin: 0 0 2vw 0;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: 1rem;
+}
+.table td {
+  padding: 0.75vw;
+}
+.table th {
+  padding: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--second-pink);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--primary-pink);
+}
+
+table {
+  background-color: var(--second-pink);
+}
