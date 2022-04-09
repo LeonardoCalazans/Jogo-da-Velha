@@ -1,4 +1,4 @@
-const buttonPlay = document.querySelector('[data-submit="button-play"]');
+const buttonPlay = document.querySelector('.button-play');
 const gaming = document.getElementById('gameplay');
 const login = document.querySelector('.login');
 
