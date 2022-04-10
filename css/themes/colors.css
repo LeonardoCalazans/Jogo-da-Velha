@@ -2,6 +2,8 @@
     --primary-pink:#c90086;
     --second-pink: #70106b;
     --font: #ccc;
-    --color: #ebe9e9;
-    --color-hover: rgba(255, 255, 255, 0.3);
+    --circleColor: #ebe9e9;
+    --crossColor: #242323;
+    --circleColor-hover: rgba(255, 255, 255, 0.3);
+    --crossColor-hover: rgba(53, 52, 52, 0.3);
 }

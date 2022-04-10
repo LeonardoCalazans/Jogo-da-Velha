@@ -1,9 +1,7 @@
-// import { 
-//     buttonPlayNow,
-//     onePlayer as player1,
-//     twoPlayer as player2
-//  } from "./modules/buttonPlay.js";
-import buttonPlayNow from "./modules/buttonPlay.js";
+import { 
+    buttonPlayNow,
+    players
+ } from "./modules/buttonPlay.js";
 /*
 PONTOS DA AV1:    
     JOGO SÓ PODE COMEÇAR QUANDO O NOME DE AMBOS JOGADORES FOREM INFORMADOS
@@ -67,10 +65,12 @@ const swapTurn = () => {
 }
 
 const endGame = (isDraw) => {
+    const [ player1, player2 ] = players;
+    
     if(isDraw) {
         winningMessageTextElement.innerText = "Deu velha!";
     } else {
-        winningMessageTextElement.innerText = `O jogador ${isCircleTurn ? "O" : "X"} venceu!`;
+        winningMessageTextElement.innerText = `O jogador ${isCircleTurn ? player1 : player2} venceu!`;
     }
 
     winningMessage.classList.remove("hidden");
@@ -107,7 +107,12 @@ const handleClick = (event) => {
 }
 
 function startGame() {
-    // console.log(player1, player2);
+    const [ player1, player2 ] = players;
+    const player1Element = document.querySelector("#playerOne");
+    const player2Element = document.querySelector("#playerTwo");
+
+    player1Element.children[0].innerText = player1;
+    player2Element.children[0].innerText = player2;
 
     for (const line of linesPlayed) {
         line.classList.remove("circle");
@@ -120,9 +125,25 @@ function startGame() {
     winningMessage.classList.add("hidden");
 }
 
-buttonPlayNow();
-startGame();
-restartButton.addEventListener('click', startGame);
+const restartGame = () => {
+    const gaming = document.getElementById('gameplay');
+    const login = document.querySelector('.login');
+
+    players.splice(0, players.length);
+
+    login.classList.remove('hidden');
+    gaming.classList.add('hidden');
+    winningMessage.classList.add("hidden");
+}
+
+buttonPlayNow(startGame);
+restartButton.addEventListener('click', restartGame);
+revangeButton.addEventListener('click', startGame);
+recordsButton.addEventListener('click', () => {
+    window.location.href = 'records.html';
+});
+
+
 
 
 
