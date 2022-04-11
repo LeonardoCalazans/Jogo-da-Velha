@@ -1,7 +1,7 @@
-import { 
+import {
     buttonPlayNow,
     players
- } from "./modules/buttonPlay.js";
+} from "./modules/buttonPlay.js";
 
 const linesPlayed = document.querySelectorAll(".line-played");
 const board = document.getElementById("board");
@@ -43,7 +43,7 @@ const setBoardHoverClass = () => {
     board.classList.remove("circle");
     board.classList.remove("x");
 
-    if(isCircleTurn) {
+    if (isCircleTurn) {
         board.classList.add("circle");
     } else {
         board.classList.add("x");
@@ -56,36 +56,44 @@ const swapTurn = () => {
 }
 
 const endGame = (isDraw) => {
-    const [ player1, player2 ] = players;
-    
-    if(isDraw) {
+    const [player1, player2] = players;
+
+    if (isDraw) {
         winningMessageTextElement.innerText = "Deu velha!";
         draws.push(1);
     } else {
         isCircleTurn ? winners.push(player1) : winners.push(player2);
         winningMessageTextElement.innerText = `O jogador ${isCircleTurn ? player1 : player2} venceu!`;
     }
-
-    if(pointsPlayer1 === 3) {
+    if (pointsPlayer1 === 2) {
         revangeButton.classList.add('hidden');
         winningMessageTextElement.innerText = `O jogador ${player1} venceu 3 vezes!`;
-    } else if(pointsPlayer2 === 3) {
+        setWinners({ player1, player2 })
+    }
+    if (pointsPlayer2 === 2) {
         revangeButton.classList.add('hidden');
         winningMessageTextElement.innerText = `O jogador ${player2} venceu 3 vezes!`;
+        setWinners({ win: player2, lose: player1 })
     }
 
     winningMessage.classList.remove("hidden");
-    localStorage.setItem("winners", JSON.stringify(winners));
-    localStorage.setItem("draws", JSON.stringify(draws.length));
+}
+
+function setWinners(props) {
+    let winner = localStorage.getItem('winners')
+        ? JSON.parse(localStorage.getItem('winners'))
+        : [];
+    winner.push(props)
+    localStorage.setItem("winners", JSON.stringify(winner));
 }
 
 const checkEndGame = (currentPlayer) => {
     const isWin = checkForWin(currentPlayer);
-    if(isWin) {
+    if (isWin) {
         endGame(false);
     } else {
         const isDraw = checkForDraw();
-        if(isDraw) {
+        if (isDraw) {
             endGame(true);
         }
     }
@@ -110,25 +118,25 @@ const handleClick = (event) => {
 
 const setPlayers = () => {
 
-    const [ player1, player2 ] = players;
+    const [player1, player2] = players;
     const player1Element = document.querySelector("#playerOne");
     const player2Element = document.querySelector("#playerTwo");
-    
+
     player1Element.children[0].innerText = player1;
     player2Element.children[0].innerText = player2;
-    
+
     pointsPlayer1 = 0;
     pointsPlayer2 = 0;
 
-    if(pointsPlayer1 === 3 || pointsPlayer2 === 3) {
+    if (pointsPlayer1 === 2 || pointsPlayer2 === 2) {
         winners.splice(0, winners.length);
     }
 
     winners.find(winner => {
-        if(winner === player1) {
+        if (winner === player1) {
             pointsPlayer1 += 1;
             player1Element.children[1].innerText = `Placar: ${pointsPlayer1}`;
-        } else if(winner === player2){
+        } else if (winner === player2) {
             pointsPlayer2 += 1;
             player2Element.children[1].innerText = `Placar: ${pointsPlayer2}`;
         }
