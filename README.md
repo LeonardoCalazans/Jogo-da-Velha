@@ -1,4 +1,3 @@
-# Jogo-da-Velha
 ![image](https://user-images.githubusercontent.com/101343665/162645754-770c2f04-f8c4-4e41-a833-1d331b342d8c.png)
 
 
