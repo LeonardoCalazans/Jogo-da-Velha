@@ -102,11 +102,6 @@ const handleClick = (event) => {
     swapTurn();
 }
 
-const createDataCells = (cell) => {
-    const td = document.createElement('td');
-    td.innerText = `${cell}`;
-}
-
 const setPlayers = () => {
 
     const [ player1, player2 ] = players;
