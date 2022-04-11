@@ -1,25 +1,21 @@
-const winners = localStorage.getItem('winners');
-const draws = localStorage.getItem('draws');
+const record = document.querySelector('.win');
+function getRecords() {
+    const records = JSON.parse(localStorage.getItem('winners'));
+    console.log(records)
+    records.map(({ win, lose }, index) => {
+        console.log(index)
+        console.log(win)
+        console.log(lose)
+        setTimeout(() => {
+            record.innerHTML = record.innerHTML +
+                `
+                <tbody class="table-tbody">
+                    <tr><td>${win}</td><td>${lose}</td></tr>
+                </tbody>
+                `
+                ;
+        }, 1000);
+    });
 
-const createDataCells = (cells) => {
-    const td = document.createElement('td');
-
-    if(cells.length > 0) {
-        for (const cell of cells) {
-            td.innerText = `${cell}`;
-        }
-    } else {
-        td.innerText = `${cells}`;
-    }
-    return td;
 }
-
-const showRecords = () => {
-    const allWinners = document.getElementById('winners');
-    const allDraws = document.getElementById('draws');
-
-    allWinners.appendChild(createDataCells(winners));
-    allDraws.appendChild(createDataCells(draws));
-}
-
-showRecords();
+getRecords();
