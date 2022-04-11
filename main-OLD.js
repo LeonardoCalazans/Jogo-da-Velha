@@ -11,7 +11,6 @@ const restartButton = document.querySelector("#buttonPlayAgain");
 const revangeButton = document.querySelector("#buttonRevanche");
 const recordsButton = document.querySelector("#buttonRecords");
 const winners = [];
-const draws = [];
 let pointsPlayer1 = 0;
 let pointsPlayer2 = 0;
 let isCircleTurn;
@@ -60,20 +59,29 @@ const endGame = (isDraw) => {
 
     if (isDraw) {
         winningMessageTextElement.innerText = "Deu velha!";
-        draws.push(1);
     } else {
-        isCircleTurn ? winners.push(player1) : winners.push(player2);
-        winningMessageTextElement.innerText = `O jogador ${isCircleTurn ? player1 : player2} venceu!`;
+        if (isCircleTurn) {
+            winningMessageTextElement.innerText = `${player1} venceu!`;
+            pointsPlayer1 += 1;
+            winners.push(player1);
+        } else {
+            winningMessageTextElement.innerText = `${player2} venceu!`;
+            pointsPlayer2 += 1;
+            winners.push(player2);
+        }
     }
-    if (pointsPlayer1 === 2) {
+
+    if (pointsPlayer1 === 3) {
         revangeButton.classList.add('hidden');
         winningMessageTextElement.innerText = `O jogador ${player1} venceu 3 vezes!`;
-        setWinners({ player1, player2 })
+        setWinners({ win: player1, lose: player2 })
+        pointsPlayer1 = 0;
     }
-    if (pointsPlayer2 === 2) {
+    if (pointsPlayer2 === 3) {
         revangeButton.classList.add('hidden');
         winningMessageTextElement.innerText = `O jogador ${player2} venceu 3 vezes!`;
         setWinners({ win: player2, lose: player1 })
+        pointsPlayer2 = 0;
     }
 
     winningMessage.classList.remove("hidden");
@@ -125,19 +133,14 @@ const setPlayers = () => {
     player1Element.children[0].innerText = player1;
     player2Element.children[0].innerText = player2;
 
-    pointsPlayer1 = 0;
-    pointsPlayer2 = 0;
-
-    if (pointsPlayer1 === 2 || pointsPlayer2 === 2) {
+    if (pointsPlayer1 === 3 || pointsPlayer2 === 3) {
         winners.splice(0, winners.length);
     }
 
     winners.find(winner => {
         if (winner === player1) {
-            pointsPlayer1 += 1;
             player1Element.children[1].innerText = `Placar: ${pointsPlayer1}`;
         } else if (winner === player2) {
-            pointsPlayer2 += 1;
             player2Element.children[1].innerText = `Placar: ${pointsPlayer2}`;
         }
     });

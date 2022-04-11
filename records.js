@@ -1,11 +1,7 @@
 const record = document.querySelector('.win');
 function getRecords() {
     const records = JSON.parse(localStorage.getItem('winners'));
-    console.log(records)
     records.map(({ win, lose }, index) => {
-        console.log(index)
-        console.log(win)
-        console.log(lose)
         setTimeout(() => {
             record.innerHTML = record.innerHTML +
                 `
