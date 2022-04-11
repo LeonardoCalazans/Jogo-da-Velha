@@ -11,8 +11,13 @@
   content: "";
   height: calc(10rem * 0.15);
   width: calc(10rem * 0.9);
-  background: var(--color);
+  background: var(--circleColor);
   position: absolute;
+}
+
+.line-played.x::before,
+.line-played.x::after {
+   background: var(--crossColor);
 }
 
 .line-played.x::before,
@@ -32,7 +37,7 @@
   content: "";
   height: calc(8rem * 0.9);
   width: calc(8rem * 0.9);
-  background: var(--color);
+  background: var(--circleColor);
   position: absolute;
   border-radius: 50%;
 }
@@ -41,5 +46,10 @@
 #board.x .line-played:not(.x):not(.circle):hover::before,
 #board.circle .line-played:not(.x):not(.circle):hover::after,
 #board.x .line-played:not(.x):not(.circle):hover::before {
-  background: var(--color-hover);
+  background: var(--circleColor-hover);
+}
+
+#board.x .line-played:not(.x):not(.circle):hover::after,
+#board.x .line-played:not(.x):not(.circle):hover::before {
+  background: var(--crossColor-hover);
 }
