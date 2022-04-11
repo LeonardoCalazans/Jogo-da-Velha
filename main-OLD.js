@@ -66,11 +66,17 @@ const endGame = (isDraw) => {
         winningMessageTextElement.innerText = `O jogador ${isCircleTurn ? player1 : player2} venceu!`;
     }
 
-    if(pointsPlayer1 === 3 || pointsPlayer2 === 3) {
+    if(pointsPlayer1 === 3) {
         revangeButton.classList.add('hidden');
+        winningMessageTextElement.innerText = `O jogador ${player1} venceu 3 vezes!`;
+    } else if(pointsPlayer2 === 3) {
+        revangeButton.classList.add('hidden');
+        winningMessageTextElement.innerText = `O jogador ${player2} venceu 3 vezes!`;
     }
 
     winningMessage.classList.remove("hidden");
+    localStorage.setItem("winners", JSON.stringify(winners));
+    localStorage.setItem("draws", JSON.stringify(draws.length));
 }
 
 const checkEndGame = (currentPlayer) => {
