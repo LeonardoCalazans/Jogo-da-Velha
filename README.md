@@ -5,7 +5,7 @@
 
 Esse projeto tem como objetivo produzir um jogo da velha que conta com um histórico de vitórias, ao final de cada partida a vitória é computada e o jogo se encerra quando um dos jogares ganhar 3 vezes.
 
-Foi um trabalho produzido com o prazo de uma semana, afim de ser entregue ao professor da Unicarioca Antonio Felipe Podgorski Bezerra para a matéria DESENVOLVIMENTO DE APLICAÇÕES WEB 2022/1
+Foi um trabalho produzido com o prazo de uma semana, afim de ser entregue ao professor da Unicarioca [Antonio Felipe Podgorski Bezerra](https://github.com/podgorski) para a matéria DESENVOLVIMENTO DE APLICAÇÕES WEB 2022/1
 
 ## Tecnologias Utilizadas
 
