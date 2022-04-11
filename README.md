@@ -25,7 +25,7 @@ Optamos por separar o css em varios arquivos afim de dividir a estilização de 
 
 ### HTML
 
-Utilizamos duas paginas HTML,
+Utilizamos duas paginas HTML
 
 ![image](https://user-images.githubusercontent.com/101343665/162645819-c0298e75-d20f-45b2-99d3-d3ec5a6a0dfd.png)
 
@@ -35,12 +35,13 @@ Utilizamos duas paginas HTML,
 
 Como ja mencionado antes, utilizamos o ES6 tipo modulo. Para fazer a lógica do jogo e verificar o vencedor, contar as vitórias e fazer alternancia de turnos. 
 
-//falta imagem
+![image](https://user-images.githubusercontent.com/101343665/162765859-c56a1828-b31e-48fb-93ab-6e6b1120a3f1.png)
 
 
 ## Projeto
 
-// falta video
+https://user-images.githubusercontent.com/101343665/162767695-577976aa-6ac3-454c-96d7-709e20576e3a.mp4
+
 
 ## Projeto realizado pelos develops
 
