@@ -1,7 +1,81 @@
 :root{
-    --primary-pink:#c90086;
-    --second-pink: #70106b;
+    --primary:#c90086;
+    --second: #70106b;
     --font: #ccc;
     --color: #ebe9e9;
     --color-hover: rgba(255, 255, 255, 0.3);
+}
+
+.blue{
+    --primary:#00a1c9;
+    --second: #121070;
+}
+
+.red{
+    --primary:#c90000;
+    --second: #701010;
+}
+
+.green{
+    --primary:#17790a;
+    --second: #083b15;
+}
+
+.dark{
+    --primary:#b1b1b1;
+    --second: #000;
+}
+#pink{
+    content: "";
+  height: 2rem;
+  width: 2rem;
+  background: #c90086;
+  /* position: absolute; */
+  border-radius: 50%;
+}
+#blue{
+    content: "";
+  height: 2rem;
+  width: 2rem;
+  background: #00a1c9;
+  /* position: absolute; */
+  border-radius: 50%;
+}
+
+#red{
+    content: "";
+  height: 2rem;
+  width: 2rem;
+  background: #c90000;
+  /* position: absolute; */
+  border-radius: 50%;
+}
+
+#green{
+    content: "";
+  height: 2rem;
+  width: 2rem;
+  background: #17790a;
+  /* position: absolute; */
+  border-radius: 50%;
+}
+
+#dark{
+    content: "";
+  height: 2rem;
+  width: 2rem;
+  background: #b1b1b1;
+  /* position: absolute; */
+  border-radius: 50%;
+}
+
+.options-colors{
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    top: 0;
+    left: 0;
+    
 }

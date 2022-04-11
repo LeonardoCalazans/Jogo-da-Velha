@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 body{
-    background: linear-gradient(90deg, var(--second-pink), var(--primary-pink));
+    background: linear-gradient(90deg, var(--second), var(--primary));
     color:var(--font);
     font-size: 24px;
     font-family: arial;
@@ -14,12 +14,13 @@ body{
     padding:0;
     width: 100vw;
     height: 100vh;
+}
+.flex{
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
 }
-
 .flex-row{
     display: flex;
     flex-direction: row;

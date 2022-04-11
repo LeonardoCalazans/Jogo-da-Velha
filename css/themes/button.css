@@ -2,10 +2,10 @@
 @import url('../themes/colors.css');
 
 .button-play{
-    background-color: var(--second-pink);
+    background-color: var(--second);
     width: 89%;
     height: 60px;
-    border:2px solid var(--primary-pink);
+    border:2px solid var(--primary);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -18,10 +18,10 @@
 }
 
 .button{
-    background-color: var(--second-pink);
+    background-color: var(--second);
     width: 120%;
     height: 5rem;
-    border:2px solid var(--primary-pink);
+    border:2px solid var(--primary);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -36,6 +36,6 @@
 .button:hover, .button-play:hover{
     transition: .5s;
     animation: bounce 1s;
-    background-color: var(--primary-pink);
+    background-color: var(--primary);
     opacity: 0.8;
 }
