@@ -32,16 +32,15 @@
             <button class="button-play">Começar o Jogo!</button>
         </section>
         <section id="gameplay" class="hidden">
-            <div id="playOne" class='scoreboard'>
+            <div id="playerOne" class='scoreboard'>
                 <h1>jogador um</h1>
                 <h2>Placar: ...</h2>
             </div>
-            <div id="board" class="circle">
+            <div id="board">
                 <div class="line-board" id="line-one">
-                    <div class="line-played x"></div>
-                    <div class="line-played circle"></div>
                     <div class="line-played"></div>
-                </div>
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
                 <div class="line-board" id="line-two">
                     <div class="line-played"></div>
                     <div class="line-played"></div>
@@ -58,19 +57,18 @@
                 <h2>Placar: ...</h2>
             </div>
         </section>
-        <section class="hidden">
-            <div class="winning-message">
-                <p class="winning-message-text"> Jogador venceu</p>
-                <div class="flex-row">
-                    <button id="buttonRevanche" class="button">Revanche!</button>
-                    <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
-                    <button id="buttonRecords" class="button">Recordes</button>
+        <section class="winning-message hidden">
+            <p class="winning-message-text"> Jogador venceu</p>
+            <div class="flex-row">
+                <button id="buttonRevanche" class="button">Revanche!</button>
+                <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
+                <button id="buttonRecords" class="button">Recordes</button>
 
-                </div>
             </div>
         </section>
     </div>
-    <script src="main.js" type="module"></script>
+    <script src="main-OLD.js" type="module"></script>
+    <!-- <script src="main.js" type="module"></script> -->
 </body>
 
 </html>

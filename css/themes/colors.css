@@ -2,6 +2,10 @@
     --primary:#c90086;
     --second: #70106b;
     --font: #ccc;
+    --circleColor: #ebe9e9;
+    --crossColor: #242323;
+    --circleColor-hover: rgba(255, 255, 255, 0.3);
+    --crossColor-hover: rgba(53, 52, 52, 0.3);
     --color: #ebe9e9;
     --color-hover: rgba(255, 255, 255, 0.3);
 }
@@ -77,5 +81,4 @@
     /* justify-content: space-between; */
     top: 0;
     left: 0;
-    
 }
