@@ -18,9 +18,7 @@ function setLocalStorage(color) {
 }
 
 if (localStorage.getItem('color')) {
-    console.log('entrou')
     let getColor = JSON.parse(localStorage.getItem('color'))
-    console.log(getColor)
     setLocalStorage(getColor);
     body.classList.add(getColor);
 }

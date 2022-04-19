@@ -152,7 +152,6 @@ const setPlayers = () => {
 
 function startGame() {
     const titleMD3 = document.getElementById('titleMD3');
-    console.log(titleMD3)
     setPlayers();
 
     for (const line of linesPlayed) {
