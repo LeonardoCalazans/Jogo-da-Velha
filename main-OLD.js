@@ -2,6 +2,9 @@ import {
     buttonPlayNow,
     players
 } from "./modules/buttonPlay.js";
+import setColors from "./modules/setColors.js";
+
+setColors;
 
 const linesPlayed = document.querySelectorAll(".line-played");
 const board = document.getElementById("board");
@@ -9,7 +12,8 @@ const winningMessageTextElement = document.querySelector(".winning-message-text"
 const winningMessage = document.querySelector(".winning-message");
 const restartButton = document.querySelector("#buttonPlayAgain");
 const revangeButton = document.querySelector("#buttonRevanche");
-const recordsButton = document.querySelector("#buttonRecords");
+const recordsButton = document.querySelectorAll(".buttonRecords");
+
 const winners = [];
 let pointsPlayer1 = 0;
 let pointsPlayer2 = 0;
@@ -147,6 +151,7 @@ const setPlayers = () => {
 }
 
 function startGame() {
+    const titleMD3 = document.getElementById('titleMD3');
     setPlayers();
 
     for (const line of linesPlayed) {
@@ -157,13 +162,13 @@ function startGame() {
     }
 
     setBoardHoverClass();
+    titleMD3.classList.remove('hidden');
     winningMessage.classList.add("hidden");
 }
 
 const restartGame = () => {
     const gaming = document.getElementById('gameplay');
     const login = document.querySelector('.login');
-
     players.splice(0, players.length);
 
     login.classList.remove('hidden');
@@ -175,6 +180,9 @@ const restartGame = () => {
 buttonPlayNow(startGame);
 restartButton.addEventListener('click', restartGame);
 revangeButton.addEventListener('click', startGame);
-recordsButton.addEventListener('click', () => {
-    window.location.href = 'records.html';
+
+recordsButton.forEach(index => {
+    index.addEventListener('click', () => {
+        window.location.href = 'records.html';
+    })
 });

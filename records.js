@@ -1,3 +1,7 @@
+import setColors from "./modules/setColors.js";
+
+setColors;
+
 const record = document.querySelector('.win');
 function getRecords() {
     const records = JSON.parse(localStorage.getItem('winners'));

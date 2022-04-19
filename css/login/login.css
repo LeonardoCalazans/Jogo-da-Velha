@@ -1,7 +1,9 @@
 @import url('../themes/colors.css');
 .login{
+    margin-top: 10%;
     height: 20rem;
-    background-color: var(--second-pink);
+    width: 30rem;
+    background-color: var(--second);
     border-radius: .5rem;
     display: flex;
     align-items: center;
@@ -24,6 +26,6 @@
     color:var(--font);
 }
 .input-player::selection{
-    color: var(--primary-pink);
-    border-color: var(--primary-pink);
+    color: var(--primary);
+    border-color: var(--primary);
 }

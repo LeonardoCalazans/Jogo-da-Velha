@@ -46,6 +46,6 @@
 }
 
 .line-played:hover{
-    color:var(--primary-pink);
+    color:var(--primary);
     /* background-color: #3f3f3f; */
 }

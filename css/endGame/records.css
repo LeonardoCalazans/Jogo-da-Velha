@@ -17,13 +17,13 @@
 }
 
 tbody tr:nth-child(odd) {
-  background-color: var(--second-pink);
+  background-color: var(--second);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--primary-pink);
+  background-color: var(--primary);
 }
 
 table {
-  background-color: var(--second-pink);
+  background-color: var(--second);
 }

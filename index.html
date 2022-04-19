@@ -9,55 +9,65 @@
     <title>Jogo da Velha</title>
 </head>
 
-<body>
-    <section class="login">
-        <div class="flex-row">
-            <label for="onePlayer">Jogador O :</label>
-            <input type="text" id="onePlayer" name="onePlayer" placeholder="Digite o jogador 1 (O)"
-                class="input-player" />
-        </div>
-        <div class="flex-row">
-            <label for="twoPlayer">Jogador X :</label>
-            <input type="text" id="twoPlayer" name="twoPlayer" placeholder="Digite o jogador 2 (x)"
-                class="input-player" />
-        </div>
-        <button class="button-play">Começar o Jogo!</button>
-    </section>
-    <section id="gameplay" class="hidden">
-        <div id="playerOne" class='scoreboard'>
-            <h1>jogador um</h1>
-            <h2>Placar: ...</h2>
-        </div>
-        <div id="board">
-            <div class="line-board" id="line-one">
-                <div class="line-played"></div>
-                <div class="line-played"></div>
-                <div class="line-played"></div>
+<body id="body" class="">
+    <div class="options-colors">
+        <p class="options-colors" id="pink"></p>
+        <p class="options-colors" id="blue"></p>
+        <p class="options-colors" id="green"></p>
+        <p class="options-colors" id="red"></p>
+        <p class="options-colors" id="dark"></p>
+    </div>
+    <h1 id="titleMD3" class="flex hidden">Melhor de 3</h1>
+    <div class="flex">
+        <section class="login">
+            <div class="flex-row">
+                <label for="onePlayer">Jogador O :</label>
+                <input type="text" id="onePlayer" name="onePlayer" placeholder="Digite o jogador 1 (O)"
+                    class="input-player" />
             </div>
-            <div class="line-board" id="line-two">
-                <div class="line-played"></div>
-                <div class="line-played"></div>
-                <div class="line-played"></div>
+            <div class="flex-row">
+                <label for="twoPlayer">Jogador X :</label>
+                <input type="text" id="twoPlayer" name="twoPlayer" placeholder="Digite o jogador 2 (x)"
+                    class="input-player" />
             </div>
-            <div class="line-board" id="line-three">
-                <div class="line-played"></div>
-                <div class="line-played"></div>
-                <div class="line-played"></div>
+            <button class="button-play">Começar o Jogo!</button>
+            <button class="buttonRecords button-play">Recordes</button>
+        </section>
+        <section id="gameplay" class="hidden">
+            <div id="playerOne" class='scoreboard'>
+                <h1>jogador um</h1>
+                <h2>Placar: ...</h2>
             </div>
-        </div>
-        <div id="playerTwo" class='scoreboard'>
-            <h1>jogador dois</h1>
-            <h2>Placar: ...</h2>
-        </div>
-    </section>
-    <div class="winning-message hidden">
-        <p class="winning-message-text"> Jogador venceu</p>
-        <div class="flex-row">
-            <button id="buttonRevanche" class="button">Revanche!</button>
-            <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
-            <button id="buttonRecords" class="button">Recordes</button>
-
-        </div>
+            <div id="board">
+                <div class="line-board" id="line-one">
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                </div>
+                <div class="line-board" id="line-two">
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                </div>
+                <div class="line-board" id="line-three">
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                    <div class="line-played"></div>
+                </div>
+            </div>
+            <div id="playerTwo" class='scoreboard'>
+                <h1>jogador dois</h1>
+                <h2>Placar: ...</h2>
+            </div>
+        </section>
+        <section class="winning-message hidden">
+            <p class="winning-message-text"> Jogador venceu</p>
+            <div class="flex-row">
+                <button id="buttonRevanche" class="button">Revanche!</button>
+                <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
+                <button class="buttonRecords button">Recordes</button>
+            </div>
+        </section>
     </div>
     <script src="main-OLD.js" type="module"></script>
     <!-- <script src="main.js" type="module"></script> -->
