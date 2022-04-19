@@ -10,6 +10,11 @@
     --color-hover: rgba(255, 255, 255, 0.3);
 }
 
+.pink{
+  --primary:#c90086;
+  --second: #70106b;
+}
+
 .blue{
     --primary:#00a1c9;
     --second: #121070;
