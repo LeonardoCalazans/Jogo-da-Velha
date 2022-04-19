@@ -9,7 +9,7 @@
     <title>Jogo da Velha</title>
 </head>
 
-<body class="">
+<body id="body" class="">
     <div class="options-colors">
         <p class="options-colors" id="pink"></p>
         <p class="options-colors" id="blue"></p>
@@ -17,6 +17,7 @@
         <p class="options-colors" id="red"></p>
         <p class="options-colors" id="dark"></p>
     </div>
+    <h1 id="titleMD3" class="flex hidden">Melhor de 3</h1>
     <div class="flex">
         <section class="login">
             <div class="flex-row">
@@ -30,7 +31,7 @@
                     class="input-player" />
             </div>
             <button class="button-play">Começar o Jogo!</button>
-            <button id="buttonRecords" class="button-play">Recordes</button>
+            <button class="buttonRecords button-play">Recordes</button>
         </section>
         <section id="gameplay" class="hidden">
             <div id="playerOne" class='scoreboard'>
@@ -64,8 +65,7 @@
             <div class="flex-row">
                 <button id="buttonRevanche" class="button">Revanche!</button>
                 <button id="buttonPlayAgain" class="button">Jogar Novamente</button>
-                <button id="buttonRecords" class="button">Recordes</button>
-
+                <button class="buttonRecords button">Recordes</button>
             </div>
         </section>
     </div>

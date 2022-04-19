@@ -1,8 +1,11 @@
-import startGame from "./modules/startGame.js"; 
+import startGame from "./modules/startGame.js";
 import restartGame from "./modules/restartGame.js";
-import { 
+import {
     buttonPlayNow,
 } from "./modules/buttonPlay.js";
+import setColors from "./modules/setColors.js";
+
+setColors;
 
 const restartButton = document.querySelector("#buttonPlayAgain");
 const revangeButton = document.querySelector("#buttonRevanche");

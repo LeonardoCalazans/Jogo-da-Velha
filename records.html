@@ -9,7 +9,7 @@
     <title>Jogo da Velha</title>
 </head>
 
-<body class="flex-column">
+<body id="body" class="">
     <div class="options-colors">
         <p class="options-colors" id="pink"></p>
         <p class="options-colors" id="blue"></p>
@@ -17,21 +17,23 @@
         <p class="options-colors" id="red"></p>
         <p class="options-colors" id="dark"></p>
     </div>
-    <h1>Histórico de partidas</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="table-th">Vencedores</th>
-                <th class="table-th">Perdedores</th>
-            </tr>
-        </thead>
-        <tbody class="table-tbody win">
-        </tbody>
-    </table>
-    <div>
-        <a href="index.html">
-            <button id="buttonPlayAgain" class="button">Vamos jogar!</button>
-        </a>
+    <div class="flex-column">
+        <h1>Histórico de partidas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="table-th">Vencedores</th>
+                    <th class="table-th">Perdedores</th>
+                </tr>
+            </thead>
+            <tbody class="table-tbody win">
+            </tbody>
+        </table>
+        <div>
+            <a href="index.html">
+                <button id="buttonPlayAgain" class="button">Vamos jogar!</button>
+            </a>
+        </div>
     </div>
     <script src="records.js" type="module"></script>
 </body>
