@@ -9,8 +9,8 @@
 #board.x .line-played:not(.x):not(.circle):hover::after,
 #board.x .line-played:not(.x):not(.circle):hover::before {
   content: "";
-  height: calc(10rem * 0.15);
-  width: calc(10rem * 0.9);
+  height: calc(15% * 0.15);
+  width: calc(15% * 0.9);
   background: var(--circleColor);
   position: absolute;
 }
@@ -35,8 +35,8 @@
 #board.circle .line-played:not(.x):not(.circle):hover::after,
 #board.circle .line-played:not(.x):not(.circle):hover::after {
   content: "";
-  height: calc(8rem * 0.9);
-  width: calc(8rem * 0.9);
+  height: calc(12% * 0.9);
+  width: calc(12% * 0.9);
   background: var(--circleColor);
   position: absolute;
   border-radius: 50%;

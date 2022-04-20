@@ -12,14 +12,9 @@ green.addEventListener('click', setColors)
 red.addEventListener('click', setColors)
 dark.addEventListener('click', setColors)
 
-
-function setLocalStorage(color) {
-    return localStorage.setItem("color", JSON.stringify(color));
-}
-
 if (localStorage.getItem('color')) {
     let getColor = JSON.parse(localStorage.getItem('color'))
-    setLocalStorage(getColor);
+    localStorage.setItem("color", JSON.stringify(getColor));
     body.classList.add(getColor);
 }
 
@@ -28,5 +23,5 @@ export default function setColors(event) {
     let bodyClassAdd = event.path[0].id;
     body.classList.remove(bodyClassRemove);
     body.classList.add(bodyClassAdd);
-    setLocalStorage(bodyClassAdd);
+    localStorage.setItem("color", JSON.stringify(bodyClassAdd));
 }
