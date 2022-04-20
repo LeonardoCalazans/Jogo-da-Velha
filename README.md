@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/101343665/162645754-770c2f04-f8c4-4e41-a833-1d331b342d8c.png)
+![image](https://user-images.githubusercontent.com/60453161/164118926-32e7e6fa-005f-4df6-9c1a-3cd18fedcde5.png)
 
 
 # Jogo da Velha
@@ -40,7 +40,8 @@ Como ja mencionado antes, utilizamos o ES6 tipo modulo. Para fazer a lógica do 
 
 ## Projeto
 
-https://user-images.githubusercontent.com/101343665/162767695-577976aa-6ac3-454c-96d7-709e20576e3a.mp4
+
+https://user-images.githubusercontent.com/60453161/164122124-e44639d5-6b10-4585-a821-2193a57f1801.mp4
 
 
 ## Projeto realizado pelos develops
